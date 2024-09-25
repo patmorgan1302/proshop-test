@@ -211,13 +211,13 @@ const OrderScreen = () => {
                                 Test Pay Order
                             </Button>
 
-                            <div>
-                                <PayPalButtons
-                                createOrder={createOrder}
-                                onApprove={onApprove}
-                                onError={onError}
-                                ></PayPalButtons>
-                            </div>
+                                <div>
+                                    <PayPalButtons
+                                    createOrder={createOrder}
+                                    onApprove={onApprove}
+                                    onError={onError}
+                                    ></PayPalButtons>
+                                </div>
                             </div>
                         )}
                         </ListGroup.Item>
