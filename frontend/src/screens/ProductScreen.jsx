@@ -17,7 +17,7 @@ const ProductScreen = () => {
     const navigate = useNavigate();
 
     const [qty, setQty] = useState(1);
-    const [rating, setRating] = useState('');
+    const [rating, setRating] = useState(0);
     const [comment, setComment] = useState('');
 
     const { data: product, isLoading, refetch, error } = useGetProductDetailsQuery(productId);
@@ -72,7 +72,7 @@ const ProductScreen = () => {
                             <h3>{product.name}</h3>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <Rating value={product.rating} text={`${product.numReviews}reviews`} />
+                            <Rating value={product.rating} text={`${product.numReviews} reviews`} />
                         </ListGroup.Item>
                         <ListGroup.Item>
                             Price:  ${product.price}
