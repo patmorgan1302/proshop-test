@@ -11,6 +11,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 12,
+    lucas_image: '/images/Freddy.png'
   },
   {
   
@@ -24,6 +25,7 @@ const products = [
     countInStock: 7,
     rating: 4.0,
     numReviews: 8,
+    lucas_image: '/images/BigEyes.png'
   },
   {
 
@@ -37,6 +39,7 @@ const products = [
     countInStock: 5,
     rating: 3,
     numReviews: 12,
+    lucas_image: '/images/Pete.png'
   },
   {
     
@@ -50,6 +53,7 @@ const products = [
     countInStock: 11,
     rating: 5,
     numReviews: 12,
+    lucas_image: '/images/ET.png'
   },
   {
      name: 'Logitech G-Series Gaming Mouse',
@@ -62,6 +66,7 @@ const products = [
     countInStock: 7,
     rating: 3.5,
     numReviews: 10,
+    lucas_image: '/images/Freddy.png'
   },
   {
 
@@ -75,6 +80,7 @@ const products = [
     countInStock: 0,
     rating: 4,
     numReviews: 12,
+    lucas_image: '/images/BigEyes.png'
   },
 ]
 

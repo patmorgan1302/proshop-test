@@ -9,9 +9,9 @@ const Footer = () => {
         <footer>
             <Container>
                 
-                <Row>
+                <Row >
                     <Col className="text-center py-3">
-                        <p>Demo &copy; {currentYear}</p>
+                        <p>YNGLD.co Designs // Princess Dynamite Web Development &copy; {currentYear}</p>
                     </Col>
                 </Row>
             </Container>

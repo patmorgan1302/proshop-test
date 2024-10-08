@@ -9,6 +9,7 @@ import {
   useGetProductDetailsQuery,
   useUpdateProductMutation,
   useUploadProductImageMutation,
+  // useUploadLucasLinkMutation,
 } from '../../slices/productsApiSlice';
 
 const ProductEditScreen = () => {
@@ -21,6 +22,7 @@ const ProductEditScreen = () => {
   const [category, setCategory] = useState('');
   const [countInStock, setCountInStock] = useState(0);
   const [description, setDescription] = useState('');
+  // const [lucas_link, setlucas_link] = useState('');
 
   const {
     data: product,
@@ -34,6 +36,9 @@ const ProductEditScreen = () => {
 
   const [uploadProductImage, { isLoading: loadingUpload }] =
     useUploadProductImageMutation();
+
+  // const [uploadLucasLink, { isLoading: loadingLink }] =
+  //   useUploadLucasLinkMutation();
 
   const navigate = useNavigate();
 
@@ -49,6 +54,7 @@ const ProductEditScreen = () => {
         category,
         description,
         countInStock,
+        // lucas_link
       }).unwrap(); // NOTE: here we need to unwrap the Promise to catch any rejection in our catch block
       toast.success('Product updated');
       refetch();
@@ -67,6 +73,7 @@ const ProductEditScreen = () => {
       setCategory(product.category);
       setCountInStock(product.countInStock);
       setDescription(product.description);
+      // setlucas_link(product.lucas_link);
     }
   }, [product]);
 
@@ -81,6 +88,18 @@ const ProductEditScreen = () => {
       toast.error(err?.data?.message || err.error);
     }
   };
+
+  // const secondUploadFileHandler = async (e) => {
+  //   const formData = new FormData();
+  //   formData.append('lucas_link', e.target.files[0]);
+  //   try {
+  //     const res = await uploadLucasLink(formData).unwrap();
+  //     toast.success(res.message);
+  //     setlucas_link(res.lucas_link);
+  //   } catch (err) {
+  //     toast.error(err?.data?.message || err.error);
+  //   }
+  // };
 
   return (
     <>
@@ -131,6 +150,22 @@ const ProductEditScreen = () => {
               ></Form.Control>
               {loadingUpload && <Loader />}
             </Form.Group>
+
+            {/* <Form.Group controlId='lucas_link'>
+              <Form.Label>Lucas Link</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter image url'
+                value={lucas_link}
+                onChange={(e) => setlucas_link(e.target.value)}
+              ></Form.Control>
+              <Form.Control
+                label='Choose File'
+                onChange={secondUploadFileHandler}
+                type='file'
+              ></Form.Control>
+              {loadingLink && <Loader />}
+            </Form.Group> */}
 
             <Form.Group controlId='brand'>
               <Form.Label>Brand</Form.Label>

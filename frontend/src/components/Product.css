@@ -1,0 +1,6 @@
+.product-title {
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    color: turquoise;
+    text-decoration: none;
+}

@@ -73,6 +73,10 @@ const productSchema = new mongoose.Schema({
         required: true,
         default: 0,
     },
+    lucas_image: {
+        type: String,
+        required: true
+    }
 
 }, {
     timestamps: true,

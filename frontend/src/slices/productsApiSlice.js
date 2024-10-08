@@ -43,6 +43,13 @@ export const productsApiSlice = apiSlice.injectEndpoints({
               body: data,
             }),
           }),
+        //   uploadLucasLink: builder.mutation({
+        //     query: (data) => ({
+        //       url: `/api/upload`,
+        //       method: 'POST',
+        //       body: data,
+        //     }),
+        //   }),
           deleteProduct: builder.mutation({
             query: (productId) => ({
                 url: `${PRODUCTS_URL}/${productId}`,
@@ -78,5 +85,6 @@ export const {
     useUploadProductImageMutation,
     useDeleteProductMutation,
     useCreateReviewMutation,
-    useGetTopProductsQuery
+    useGetTopProductsQuery,
+    // useUploadLucasLinkMutation
 } = productsApiSlice;

@@ -72,10 +72,7 @@ const ProductScreen = () => {
                             <h3>{product.name}</h3>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <Rating value={product.rating} text={`${product.numReviews} reviews`} />
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                            Price:  ${product.price}
+                            <Rating value={product.rating} text={`${" "} ${product.numReviews} reviews`} />
                         </ListGroup.Item>
                         <ListGroup.Item>
                             {product.description}
@@ -196,6 +193,9 @@ const ProductScreen = () => {
                         ) }
                     </ListGroup>
                 </ListGroup>
+                </Col>
+                <Col md={6}>
+                        <Image src={product.lucas_image} fluid />
                 </Col>
             </Row>
             </>
