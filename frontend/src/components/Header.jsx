@@ -41,7 +41,7 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
                             <SearchBox />
-                            <LinkContainer className='link-container' to="/cart">
+                            <LinkContainer to="/cart" style={{ marginTop: '15px' }}>
                                 <Nav.Link>
                                     <FaShoppingCart />{" "}cart
                                         {cartItems.length > 0 && (
