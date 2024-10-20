@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
-import Message from '../../components/Message';
-import Loader from '../../components/Loader';
-import FormContainer from '../../components/FormContainer';
+import Message from '../../Components/Message';
+import Loader from '../../Components/Loader';
+import FormContainer from '../../Components/FormContainer';
 import { toast } from 'react-toastify';
 import {
   useGetProductDetailsQuery,
   useUpdateProductMutation,
   useUploadProductImageMutation,
-} from '../../slices/productsApiSlice';
+} from '../../Slices/productsApiSlice';
 
 const ProductEditScreen = () => {
   const { id: productId } = useParams();
@@ -49,7 +49,7 @@ const ProductEditScreen = () => {
         category,
         description,
         countInStock,
-      }).unwrap(); 
+      }).unwrap(); // NOTE: here we need to unwrap the Promise to catch any rejection in our catch block
       toast.success('Product updated');
       refetch();
       navigate('/admin/productlist');
