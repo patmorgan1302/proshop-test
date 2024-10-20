@@ -194,9 +194,9 @@ const ProductScreen = () => {
                     </ListGroup>
                 </ListGroup>
                 </Col>
-                <Col md={6}>
+                {/* <Col md={6}>
                         <Image src={product.lucas_image} fluid />
-                </Col>
+                </Col> */}
             </Row>
             </>
             ) }
