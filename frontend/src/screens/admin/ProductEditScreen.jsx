@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import Message from '../../components/Message';
 import Loader from '../../components/Loader';
-import FormContainer from '../../Components/FormContainer';
+import FormContainer from '../../components/FormContainer';
 import { toast } from 'react-toastify';
 import {
   useGetProductDetailsQuery,
